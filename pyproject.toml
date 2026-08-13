@@ -23,6 +23,37 @@ maintainers = [
 ]
 description = "RL environments and algorithms implemented in JAX + Flax NNX."
 readme = "README.md"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Operating System :: OS Independent",
+]
+keywords = [
+    "reinforcement-learning",
+    "deep-reinforcement-learning",
+    "deep-learning",
+    "rl",
+    "jax",
+    "flax",
+    "flax-nnx",
+    "a2c",
+    "ppo",
+    "dqn",
+    "sac",
+    "td3",
+    "model-free-rl"
+]
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+GitHub = "https://github.com/jimma2-del/lyNNX"
+"Google Colab" = "https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb"
 
 [project.optional-dependencies]
 gymnax = [ "gymnax @ git+https://github.com/lebrice/gymnax.git@fix-classic-control-rendering" ]

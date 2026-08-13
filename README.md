@@ -1,7 +1,7 @@
-![Banner Demo Animations](docs/assets/banner-anims.gif)
+![Banner Demo Animations](https://raw.githubusercontent.com/jimma2-del/lyNNX/master/docs/assets/banner-anims.gif)
 <small>*Agents **trained** using lyNNX. Environments from: [Gymnax](https://github.com/RobertTLange/gymnax), [Jumanji](https://github.com/instadeepai/jumanji), [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground).*</small>
 
-# lyNNX
+# lyNNX: Deep RL in Flax NNX
 <a href="https://www.python.org/doc/versions/">
     <img src="https://img.shields.io/badge/python-3.12-blue" alt="Python Versions">
 </a>
@@ -16,7 +16,7 @@
 
 lyNNX is a repository of deep reinforcement learning (deep RL) algorithms and environments, written completely in JAX + Flax NNX for end-to-end GPU-accelerated training. 
 
-**Train ANY environment, instantly.** Algorithms are designed to support, whenever possible, ANY observation space and ANY action space &mdash; whether discrete, continuous, or a mix of both. Wrappers allow plug-and-play use with popular existing JAX RL environment libraries: [Gymnax](https://github.com/RobertTLange/gymnax), [Jumanji](https://github.com/instadeepai/jumanji), [Brax](https://github.com/google/brax), [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground), etc.
+**Train any environment, instantly.** Algorithms are designed to support, whenever possible, any observation space and any action space &mdash; whether discrete, continuous, or a mix of both. Wrappers allow plug-and-play use with popular existing JAX RL environment libraries: [Gymnax](https://github.com/RobertTLange/gymnax), [Jumanji](https://github.com/instadeepai/jumanji), [Brax](https://github.com/google/brax), [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground), etc.
 
 **Full customizability, without editing source code.** Pass your own hyperparameters, network architectures/user-defined classes, optimizers, etc. Customize environments with the many built-in wrappers or create your own. Turn any (non-structural) hyperparameter into a schedule based on training progress.
 
@@ -48,9 +48,9 @@ visualize_pygame(rngs, env, actor)
 
 ## Getting Started
 
-It is highly recommended to check out the [tutorial notebook](examples/tutorial/tutorial.ipynb) for a more complete guide. <a href="https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
+It is highly recommended to check out the [tutorial notebook](https://github.com/jimma2-del/lyNNX/tree/master/examples/tutorial/tutorial.ipynb) for a more complete guide. <a href="https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
 
-Additionally, check out [./examples/experiements](./examples/experiments) for sample scripts.
+Additionally, check out [examples/experiements](https://github.com/jimma2-del/lyNNX/tree/master/examples/experiments) for sample scripts.
 
 The rest of this section will act as an abridged summary.
 
@@ -66,7 +66,7 @@ Prerequisites: Python 3.12 or later.
     - Libraries in `[gymnax,jumanji,playground]` can be omitted if you do not need them.
 
 ### Basic Usage
-Run a sample experiment script (see [./examples/experiements](./examples/experiments)):
+Run a sample experiment script (see [examples/experiements](https://github.com/jimma2-del/lyNNX/tree/master/examples/experiments)):
 ```bash
 python examples/experiments/dqn_cartpole_gymnax/dqn_cartpole_gymnax.py
 ```
