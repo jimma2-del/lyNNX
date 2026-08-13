@@ -19,6 +19,8 @@ import jax.numpy as jnp
 from gymnax.environments.environment import Environment as GymnaxEnv
 import gymnax.environments.spaces as GymnaxSpaces
 
+from .gymnax_vis import render_env
+
 from lynnx.envs.base import Environment, Space
 
 def space_from_gymnax_space(gymnax_space: GymnaxSpaces.Space) -> Space:
@@ -48,7 +50,7 @@ def space_from_gymnax_space(gymnax_space: GymnaxSpaces.Space) -> Space:
 TEnvState = TypeVar("TEnvState")
 TEnvParams = TypeVar("TEnvParams")
 
-class GymnaxWrapper(Environment[TEnvState, ArrayLike, ArrayLike], Generic[TEnvState, TEnvParams]):
+class GymnaxWrapper(Environment[TEnvState, ArrayLike, ArrayLike, np.ndarray], Generic[TEnvState, TEnvParams]):
     """Wrapper for Gymnax environments."""
 
     def __init__(self, gymnax_env: GymnaxEnv[TEnvState, TEnvParams], gymnax_params: TEnvParams | None = None):
@@ -82,6 +84,9 @@ class GymnaxWrapper(Environment[TEnvState, ArrayLike, ArrayLike], Generic[TEnvSt
 
     def get_obs(self, key: chex.PRNGKey, state: TEnvState) -> ArrayLike:
         return self.gymnax_env.get_obs(state=state, params=self.gymnax_params, key=key)
+
+    def render(self, state: TEnvState, action: ArrayLike) -> np.ndarray:
+        return render_env(self.gymnax_env, state, self.gymnax_params)
 
     @property
     def observation_space(self) -> Space[ArrayLike]:

@@ -55,7 +55,7 @@ GitHub = "https://github.com/jimma2-del/lyNNX"
 "Google Colab" = "https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb"
 
 [project.optional-dependencies]
-gymnax = [ "gymnax @ git+https://github.com/lebrice/gymnax.git@fix-classic-control-rendering" ]
+gymnax = [ "gymnax==0.0.9" ]
 jumanji = [ "jumanji==1.1.1" ]
 playground = [
   "playground==0.2.0",
