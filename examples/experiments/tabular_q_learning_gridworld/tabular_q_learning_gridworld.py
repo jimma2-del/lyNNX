@@ -1,4 +1,4 @@
-"""This repository's Gridworld, trained with Tabular Q-Learning."""
+"""lyNNX's Gridworld, trained with Tabular Q-Learning."""
 
 import time
 import os
@@ -11,12 +11,12 @@ from flax import nnx
 from optax import schedules
 import orbax.checkpoint as ocp
 
-from core.algos import tabular_q_learning
+from lynnx.algos import tabular_q_learning
 
-from core.envs.wrappers import VmapWrapper
-from core.envs.utils import evaluate_episodes
+from lynnx.envs.wrappers import VmapWrapper
+from lynnx.envs.utils import evaluate_episodes
 
-from core.envs.gridworld import GridworldEnv
+from lynnx.envs.gridworld import GridworldEnv
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 

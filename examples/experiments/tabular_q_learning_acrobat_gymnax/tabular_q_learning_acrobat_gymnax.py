@@ -13,13 +13,13 @@ from flax import nnx
 from optax import schedules
 import orbax.checkpoint as ocp
 
-from core.algos import tabular_q_learning
+from lynnx.algos import tabular_q_learning
 
-from core.envs.base import Space
-from core.envs.wrappers import Wrapper, VmapWrapper
-from core.envs.utils import evaluate_episodes, rollout_episode
+from lynnx.envs.base import Space
+from lynnx.envs.wrappers import Wrapper, VmapWrapper
+from lynnx.envs.utils import evaluate_episodes, rollout_episode
 
-from core.envs.gymnax import GymnaxWrapper
+from lynnx.envs.gymnax import GymnaxWrapper
 import gymnax
 from gymnax.visualize import Visualizer
 

@@ -4,7 +4,7 @@ import jax.numpy as jnp
 from jax.typing import ArrayLike
 import jax
 
-from core.utils.batch_utils import batched_index, shape_matches_excluding_batch_axes
+from lynnx.utils.batch_utils import batched_index, shape_matches_excluding_batch_axes
 
 class LinearlyInterpolatedTable:
     """Linearly interpolates values using nearby grid points.

@@ -1,8 +1,7 @@
-"""Utility for converting a gymnax `Environment`/`Space` into an `Environment`/Space` 
-    following the API of this repository.
+"""Utility for converting a gymnax `Environment`/`Space` into an `Environment`/Space` following the lyNNX API.
 
 NOTE: These "wrappers" are unrelated to the Wrapper type in wrappers.py, 
-    which take in an Environment from this repository, rather than an environment from an external library.
+    which take in a lyNNX Environment, rather than an environment from an external library.
 """
 
 from typing import Any, Generic
@@ -20,7 +19,7 @@ import jax.numpy as jnp
 from gymnax.environments.environment import Environment as GymnaxEnv
 import gymnax.environments.spaces as GymnaxSpaces
 
-from core.envs.base import Environment, Space
+from lynnx.envs.base import Environment, Space
 
 def space_from_gymnax_space(gymnax_space: GymnaxSpaces.Space) -> Space:
     if isinstance(gymnax_space, GymnaxSpaces.Discrete):

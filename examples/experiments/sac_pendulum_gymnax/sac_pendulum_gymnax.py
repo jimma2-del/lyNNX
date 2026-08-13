@@ -11,12 +11,12 @@ from flax import nnx
 from optax import schedules
 import orbax.checkpoint as ocp
 
-from core.algos import sac
+from lynnx.algos import sac
 
-from core.envs.wrappers import VmapWrapper
-from core.envs.utils import evaluate_episodes, rollout_episode
+from lynnx.envs.wrappers import VmapWrapper
+from lynnx.envs.utils import evaluate_episodes, rollout_episode
 
-from core.envs.gymnax import GymnaxWrapper
+from lynnx.envs.gymnax import GymnaxWrapper
 import gymnax
 from gymnax.visualize import Visualizer
 

@@ -8,7 +8,7 @@ from jax import Array
 from typing import Any
 import chex
 
-from core.envs.base import Environment, Space
+from lynnx.envs.base import Environment, Space
 
 import jax.numpy as jnp
 import jax

@@ -1,20 +1,20 @@
 ![Banner Demo Animations](docs/assets/banner-anims.gif)
-<small>*Agents **trained** using this repository. Environments from: [Gymnax](https://github.com/RobertTLange/gymnax), [Jumanji](https://github.com/instadeepai/jumanji), [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground).*</small>
+<small>*Agents **trained** using lyNNX. Environments from: [Gymnax](https://github.com/RobertTLange/gymnax), [Jumanji](https://github.com/instadeepai/jumanji), [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground).*</small>
 
-# Learning RL JAX
+# lyNNX
 <a href="https://www.python.org/doc/versions/">
     <img src="https://img.shields.io/badge/python-3.12-blue" alt="Python Versions">
 </a>
 <a href="https://opensource.org/license/Apache-2.0">
     <img src="https://img.shields.io/badge/License-Apache%202.0-purple.svg" alt="License" />
 </a>
-<a href="https://colab.research.google.com/github/jimma2-del/learning-rl-jax/blob/master/examples/tutorial/tutorial.ipynb">
+<a href="https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg"/>
 </a>
 
-<small>*Learning RL JAX is still experimental. Expect breaking changes!*</small>
+<small>*lyNNX is still experimental. Expect breaking changes!*</small>
 
-Learning RL JAX is a repository of deep reinforcement learning (deep RL) algorithms and environments, written completely in JAX + Flax NNX for end-to-end GPU-accelerated training. 
+lyNNX is a repository of deep reinforcement learning (deep RL) algorithms and environments, written completely in JAX + Flax NNX for end-to-end GPU-accelerated training. 
 
 **Train ANY environment, instantly.** Algorithms are designed to support, whenever possible, ANY observation space and ANY action space &mdash; whether discrete, continuous, or a mix of both. Wrappers allow plug-and-play use with popular existing JAX RL environment libraries: [Gymnax](https://github.com/RobertTLange/gymnax), [Jumanji](https://github.com/instadeepai/jumanji), [Brax](https://github.com/google/brax), [Mujoco Playground](https://github.com/google-deepmind/mujoco_playground), etc.
 
@@ -48,7 +48,7 @@ visualize_pygame(rngs, env, actor)
 
 ## Getting Started
 
-It is highly recommended to check out the [tutorial notebook](examples/tutorial/tutorial.ipynb) for a more complete guide. <a href="https://colab.research.google.com/github/jimma2-del/learning-rl-jax/blob/master/examples/tutorial/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
+It is highly recommended to check out the [tutorial notebook](examples/tutorial/tutorial.ipynb) for a more complete guide. <a href="https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
 
 Additionally, check out [./examples/experiements](./examples/experiments) for sample scripts.
 
@@ -57,7 +57,7 @@ The rest of this section will act as an abridged summary.
 ### Installation
 Prerequisites: Python 3.12 or later.
 
-1. Clone the repository: `git clone https://github.com/jimma2-del/learning-rl-jax.git learning-rl-jax && cd learning-rl-jax`
+1. Clone the repository: `git clone https://github.com/jimma2-del/lyNNX.git lynnx && cd lynnx`
 2. Create a virtual environment: `python -m venv venv`
 3. Activate it: `venv/Scripts/activate` (Windows), or `source venv/bin/activate` (macOS and Linux)
 4. Install JAX with CUDA 12: `pip install -U "jax[cuda12]`
@@ -75,11 +75,11 @@ Or, write your own script:
 ```py
 from flax import nnx
 
-from core.algos import dqn
-from core.envs.wrappers import VmapWrapper
-from core.envs.utils import evaluate_episodes
+from lynnx.algos import dqn
+from lynnx.envs.wrappers import VmapWrapper
+from lynnx.envs.utils import evaluate_episodes
 
-from core.envs.gymnax import GymnaxWrapper
+from lynnx.envs.gymnax import GymnaxWrapper
 import gymnax
 
 gymnax_env, gymnax_env_params = gymnax.make("CartPole-v1")

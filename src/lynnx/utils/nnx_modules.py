@@ -14,11 +14,11 @@ import numpy as np
 
 from flax import nnx
 
-from core.envs.base import Space
-from core.utils import RunningMeanVar
-from core.utils.func_utils import optionally_pass
+from lynnx.envs.base import Space
+from lynnx.utils import RunningMeanVar
+from lynnx.utils.func_utils import optionally_pass
 
-from core.algos.base import AlgoPhase
+from lynnx.algos.base import AlgoPhase
 
 TNetworkInput = TypeVar("TNetworkInput")
 
@@ -41,7 +41,7 @@ class StatefulFunc(nnx.Module, Generic[TStatefulFuncState, TStatefulFuncParams, 
     Examples:
         >>> import jax.numpy as jnp
         >>> from flax import nnx
-        >>> from core.utils.nnx_modules import StatefulFunc
+        >>> from lynnx.utils.nnx_modules import StatefulFunc
 
         >>> class Counter(nnx.Module):
         ...     def __init__(self):
@@ -161,7 +161,7 @@ TEnvAction = TypeVar("TEnvAction")
 
 class ActionDistributionHead(nnx.Module, Generic[TEnvAction]):
     """Converts a layer of floats into an action distribution.
-    See :func:`core.envs.base.Space.sample_distribution` for details on the structure of the output distribution.
+    See :func:`lynnx.envs.base.Space.sample_distribution` for details on the structure of the output distribution.
     
     If `do_state_independent_stds` is True, stores tunable parameters representing log stds.
     """

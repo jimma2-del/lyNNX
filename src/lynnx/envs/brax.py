@@ -1,8 +1,7 @@
-"""Utility for converting a Brax `PipelineEnv` into an `Environment`/`Space` 
-    following the API of this repository.
+"""Utility for converting a Brax `PipelineEnv` into an `Environment`/`Space` following the lyNNX API.
 
 NOTE: These "wrappers" are unrelated to the Wrapper type in wrappers.py, 
-    which take in an Environment from this repository, rather than an environment from an external library.
+    which take in a lyNNX Environment, rather than an environment from an external library.
 """
 
 from typing import Any
@@ -18,7 +17,7 @@ import jax.numpy as jnp
 from brax.envs.base import PipelineEnv, State as BraxState
 from brax.io import image
 
-from core.envs.base import Environment, Space
+from lynnx.envs.base import Environment, Space
 
 class BraxWrapper(Environment[BraxState, jax.Array, jax.Array, np.ndarray]):
     """Wrapper for Brax environments."""

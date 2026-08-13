@@ -13,15 +13,15 @@ from flax import nnx
 from optax import schedules
 import orbax.checkpoint as ocp
 
-from core.algos import ppo
+from lynnx.algos import ppo
 
-from core.envs.wrappers import VmapWrapper, EpisodeStepCountWrapper, PrecomputedResetsPoolWrapper
-from core.envs.utils import evaluate_episodes, rollout_episode
+from lynnx.envs.wrappers import VmapWrapper, EpisodeStepCountWrapper, PrecomputedResetsPoolWrapper
+from lynnx.envs.utils import evaluate_episodes, rollout_episode
 
-from core.utils.nnx_modules import MLP, RunningMeanVarNorm, ActionDistributionHead, Pipe
-from core.utils.batch_utils import flatten_batched_tree, get_tree_flattened_dim
+from lynnx.utils.nnx_modules import MLP, RunningMeanVarNorm, ActionDistributionHead, Pipe
+from lynnx.utils.batch_utils import flatten_batched_tree, get_tree_flattened_dim
 
-from core.envs.mujoco_playground import MuJoCoPlaygroundWrapper
+from lynnx.envs.mujoco_playground import MuJoCoPlaygroundWrapper
 from mujoco_playground import registry
 
 DIR = os.path.dirname(os.path.abspath(__file__))

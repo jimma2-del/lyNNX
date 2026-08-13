@@ -14,14 +14,14 @@ import optax
 import chex
 import orbax.checkpoint as ocp
 
-from core.algos import ppo
+from lynnx.algos import ppo
 
-from core.envs.base import Environment, Space
-from core.envs.wrappers import Wrapper, EpisodeStepCountWrapper, VmapWrapper
-from core.utils.nnx_modules import ActionDistributionHead
-from core.envs.utils import evaluate_episodes, rollout_episode
+from lynnx.envs.base import Environment, Space
+from lynnx.envs.wrappers import Wrapper, EpisodeStepCountWrapper, VmapWrapper
+from lynnx.utils.nnx_modules import ActionDistributionHead
+from lynnx.envs.utils import evaluate_episodes, rollout_episode
 
-from core.envs.jumanji import JumanjiWrapper
+from lynnx.envs.jumanji import JumanjiWrapper
 import jumanji
 from jumanji.environments.routing.snake import Observation as SnakeObs, State as SnakeState
 

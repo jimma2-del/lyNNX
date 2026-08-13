@@ -4,7 +4,7 @@ import jax
 import jax.numpy as jnp
 import chex
 
-from core.utils.batch_utils import flatten_tree_batch_axes
+from lynnx.utils.batch_utils import flatten_tree_batch_axes
 
 TInput = TypeVar('TInput')
 

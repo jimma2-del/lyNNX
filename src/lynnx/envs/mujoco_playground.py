@@ -1,8 +1,7 @@
-"""Utility for converting a MuJoCo Playground `MjxEnv` into an `Environment`/`Space` 
-    following the API of this repository.
+"""Utility for converting a MuJoCo Playground `MjxEnv` into an `Environment`/`Space` following the lyNNX API.
 
 NOTE: These "wrappers" are unrelated to the Wrapper type in wrappers.py, 
-    which take in an Environment from this repository, rather than an environment from an external library.
+    which take in a lyNNX Environment, rather than an environment from an external library.
 """
 
 from typing import Any
@@ -17,7 +16,7 @@ import jax.numpy as jnp
 
 from mujoco_playground import MjxEnv, State as MjxState
 
-from core.envs.base import Environment, Space
+from lynnx.envs.base import Environment, Space
 
 class MuJoCoPlaygroundWrapper(Environment[MjxState, jax.Array, jax.Array, np.ndarray]):
     """Wrapper for MuJoCo Playground (MjxEnv) environments."""

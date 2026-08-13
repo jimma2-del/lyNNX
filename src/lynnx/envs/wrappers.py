@@ -12,7 +12,7 @@ import jax.numpy as jnp
 import numpy as np
 
 from .base import Environment, Space
-from core.utils.batch_utils import get_vmap_axis_size, dummy_vmap, split_key_from_batch, split_batched_keys
+from lynnx.utils.batch_utils import get_vmap_axis_size, dummy_vmap, split_key_from_batch, split_batched_keys
 
 TEnvState = TypeVar("TEnvState")
 TEnvObs = TypeVar("TEnvObs")
@@ -98,7 +98,7 @@ class ObsRangeNormalizeWrapper(
     Ignores features with both sides unbounded (-inf, inf), keeping the values unaltered.
         NOTE: Keep in mind when using this wrapper that unbounded observation features
             are very common; this wrapper may not be suitable for many environments.
-        Try the :class:`core.utils.nnx_modules.RunningMeanVarNorm` network layer instead
+        Try the :class:`lynnx.utils.nnx_modules.RunningMeanVarNorm` network layer instead
             (included by default in all network-based algorithms).
 
     NOTE: May convert discrete (np.integer) data types to continuous (np.floating).

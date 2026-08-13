@@ -25,21 +25,21 @@ import chex
 
 from flax import nnx
 
-from core.utils import LinearlyInterpolatedTable
-from core.utils.func_utils import try_call
-from core.utils.batch_utils import flatten_batched_tree
+from lynnx.utils import LinearlyInterpolatedTable
+from lynnx.utils.func_utils import try_call
+from lynnx.utils.batch_utils import flatten_batched_tree
 
-from core.envs.base import Environment, Space
-from core.algos.base import Scheduleable, GreedyQActor, set_algo_phase, AlgoPhase
+from lynnx.envs.base import Environment, Space
+from lynnx.algos.base import Scheduleable, GreedyQActor, set_algo_phase, AlgoPhase
 
-from core.envs.wrappers import AutoResetWrapper
+from lynnx.envs.wrappers import AutoResetWrapper
 
 TEnvState = TypeVar("TEnvState")
 TEnvObs = TypeVar("TEnvObs")
 
 class TabularQFunc(Generic[TEnvObs], nnx.Module):
     """Get Q values by looking up in a discrete Q table, rounding indices if they fall between gridpoints.
-    Implements the `core.algos.base.DiscreteQFunc` protocol."""
+    Implements the `lynnx.algos.base.DiscreteQFunc` protocol."""
 
     def __init__(self, 
         num_actions: int,
@@ -100,7 +100,7 @@ class TabularQFunc(Generic[TEnvObs], nnx.Module):
 
 class LinInterpTabularQFunc(Generic[TEnvObs], TabularQFunc[TEnvObs]):
     """Get Q values by linearly interpolating nearby table corners.
-    Implements the `core.algos.base.DiscreteQFunc` protocol."""
+    Implements the `lynnx.algos.base.DiscreteQFunc` protocol."""
 
     def __init__(self, 
         num_actions: int,

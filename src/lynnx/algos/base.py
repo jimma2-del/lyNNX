@@ -16,10 +16,10 @@ import chex
 from flax import nnx
 import optax
 
-from core.utils.func_utils import optionally_pass, override_signature, try_call
-from core.utils.batch_utils import get_tree_batch_dims
-from core.envs.base import Space, Environment
-#from core.envs.utils import Actor
+from lynnx.utils.func_utils import optionally_pass, override_signature, try_call
+from lynnx.utils.batch_utils import get_tree_batch_dims
+from lynnx.envs.base import Space, Environment
+#from lynnx.envs.utils import Actor
 
 TScheduleValue = TypeVar('TScheduleValue')
 

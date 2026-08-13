@@ -1,5 +1,5 @@
 # Experiments
-This directory contains complete sample scripts for training various RL algorithms on various environments, from this repository or otherwise.
+This directory contains complete sample scripts for training various RL algorithms on various lyNNX and external environments.
 
 For example, run
 ```bash

@@ -22,16 +22,16 @@ from dataclasses import field
 from flax import nnx
 import optax
 
-from core.utils.func_utils import try_call, optionally_pass, override_signature
-from core.utils.misc import compacting_mask
-from core.utils import RunningMeanVar
-from core.utils.nnx_modules import MLP, RunningMeanVarNorm, ActionDistributionHead, stateful_func, Pipe
+from lynnx.utils.func_utils import try_call, optionally_pass, override_signature
+from lynnx.utils.misc import compacting_mask
+from lynnx.utils import RunningMeanVar
+from lynnx.utils.nnx_modules import MLP, RunningMeanVarNorm, ActionDistributionHead, stateful_func, Pipe
 
-from core.algos.base import Scheduleable, StochasticPolicyActor, set_algo_phase, AlgoPhase, with_grad_clip
+from lynnx.algos.base import Scheduleable, StochasticPolicyActor, set_algo_phase, AlgoPhase, with_grad_clip
 
-from core.envs.base import Environment, Space
-from core.envs.wrappers import AutoResetWrapper, SquashContinuousActionsToBoundsWrapper
-from core.envs.utils import rollout, Timestep
+from lynnx.envs.base import Environment, Space
+from lynnx.envs.wrappers import AutoResetWrapper, SquashContinuousActionsToBoundsWrapper
+from lynnx.envs.utils import rollout, Timestep
 
 @dataclass(frozen=True)
 class Hyperparameters:

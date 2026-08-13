@@ -13,7 +13,7 @@ import jax
 
 import numpy as np
 
-from core.envs.base import Environment, Space
+from lynnx.envs.base import Environment, Space
 
 MAP_DIR = path.join(path.dirname(__file__), "maps")
 get_map_path = lambda x: path.join(MAP_DIR, x)

@@ -1,4 +1,4 @@
-"""Base classes for environments in this repository."""
+"""Base classes for lyNNX environments."""
 
 from typing import Any, Generic, Sequence
 from typing_extensions import TypeVar
@@ -15,8 +15,8 @@ import jax.numpy as jnp
 
 import numpy as np
 
-from core.utils.math import inv_softplus, normal_entropy
-from core.utils.batch_utils import flatten_batched_tree, unflatten_batched_tree, get_tree_flattened_dim
+from lynnx.utils.math import inv_softplus, normal_entropy
+from lynnx.utils.batch_utils import flatten_batched_tree, unflatten_batched_tree, get_tree_flattened_dim
 
 TSpaceElement = TypeVar("TSpaceElement")
 

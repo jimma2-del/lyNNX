@@ -16,12 +16,12 @@ import jax.numpy as jnp
 
 from flax import nnx
 
-from core.utils.batch_utils import get_tree_batch_dims
-from core.utils.func_utils import optionally_pass
-from core.utils.nnx_modules import Pipe
+from lynnx.utils.batch_utils import get_tree_batch_dims
+from lynnx.utils.func_utils import optionally_pass
+from lynnx.utils.nnx_modules import Pipe
 
-from core.envs.base import Environment, Space
-from core.envs.wrappers import AutoResetWrapper
+from lynnx.envs.base import Environment, Space
+from lynnx.envs.wrappers import AutoResetWrapper
 
 TEnvState = TypeVar("TEnvState")
 TEnvObs = TypeVar("TEnvObs")

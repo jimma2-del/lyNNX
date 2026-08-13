@@ -18,16 +18,16 @@ from dataclasses import field
 from flax import nnx
 import optax
 
-from core.utils import RunningMeanVar
-from core.utils.buffers import CircularBufferWithOptionalData
-from core.utils.func_utils import try_call, optionally_pass, override_signature
-from core.utils.nnx_modules import MLP, RunningMeanVarNorm, Pipe
+from lynnx.utils import RunningMeanVar
+from lynnx.utils.buffers import CircularBufferWithOptionalData
+from lynnx.utils.func_utils import try_call, optionally_pass, override_signature
+from lynnx.utils.nnx_modules import MLP, RunningMeanVarNorm, Pipe
 
-from core.algos.base import Scheduleable, GreedyQActor, AlgoPhase, set_algo_phase, with_grad_clip
+from lynnx.algos.base import Scheduleable, GreedyQActor, AlgoPhase, set_algo_phase, with_grad_clip
 
-from core.envs.base import Environment, Space
-from core.envs.wrappers import AutoResetWrapper
-from core.envs.utils import rollout, Actor, RandomActor
+from lynnx.envs.base import Environment, Space
+from lynnx.envs.wrappers import AutoResetWrapper
+from lynnx.envs.utils import rollout, Actor, RandomActor
 
 @dataclass(frozen=True)
 class Hyperparameters:

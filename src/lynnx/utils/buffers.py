@@ -11,8 +11,8 @@ from jax.typing import ArrayLike
 import chex
 import flax.struct
 
-from core.utils.batch_utils import get_tree_batch_dims, get_vmap_axis_size
-from core.utils.misc import compacting_mask
+from lynnx.utils.batch_utils import get_tree_batch_dims, get_vmap_axis_size
+from lynnx.utils.misc import compacting_mask
 
 TBufferItem = TypeVar("TBufferItem")
 
