@@ -18,7 +18,7 @@ from dataclasses import field
 from flax import nnx
 import optax
 
-from lynnx.utils import RunningMeanVar
+from lynnx.utils.running_mean_var import RunningMeanVar
 from lynnx.utils.buffers import CircularBufferWithOptionalData
 from lynnx.utils.func_utils import try_call, optionally_pass, override_signature
 from lynnx.utils.nnx_modules import MLP, RunningMeanVarNorm, Pipe

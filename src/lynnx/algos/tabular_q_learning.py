@@ -25,7 +25,7 @@ import chex
 
 from flax import nnx
 
-from lynnx.utils import LinearlyInterpolatedTable
+from lynnx.utils.linearly_interpolated_table import LinearlyInterpolatedTable
 from lynnx.utils.func_utils import try_call
 from lynnx.utils.batch_utils import flatten_batched_tree
 

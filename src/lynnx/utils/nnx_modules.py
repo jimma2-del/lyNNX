@@ -15,7 +15,7 @@ import numpy as np
 from flax import nnx
 
 from lynnx.envs.base import Space
-from lynnx.utils import RunningMeanVar
+from lynnx.utils.running_mean_var import RunningMeanVar
 from lynnx.utils.func_utils import optionally_pass
 
 from lynnx.algos.base import AlgoPhase

@@ -24,7 +24,7 @@ import optax
 
 from lynnx.utils.func_utils import try_call, optionally_pass, override_signature
 from lynnx.utils.misc import compacting_mask
-from lynnx.utils import RunningMeanVar
+from lynnx.utils.running_mean_var import RunningMeanVar
 from lynnx.utils.nnx_modules import MLP, RunningMeanVarNorm, ActionDistributionHead, stateful_func, Pipe
 
 from lynnx.algos.base import Scheduleable, StochasticPolicyActor, set_algo_phase, AlgoPhase, with_grad_clip
