@@ -61,7 +61,7 @@ playground = [
   "playground==0.2.0",
   "mujoco-mjx[warp]==3.9.0",
 ]
-viz = [ "pygame" ]
+viz = [ "mediapy", "pygame" ]
 
 [tool.setuptools.packages.find]
 where = ["src"]

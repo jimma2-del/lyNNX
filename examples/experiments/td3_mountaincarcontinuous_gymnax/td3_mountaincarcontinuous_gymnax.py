@@ -4,6 +4,8 @@ import time
 import os
 import json
 
+import mediapy
+
 import jax
 import jax.numpy as jnp
 
@@ -159,5 +161,6 @@ states = [ jax.tree.map(lambda x: x[i], states) for i in range(0, eps_steps) ]
 
 cum_rewards = jnp.cumsum(timesteps.reward)
 
-vis = Visualizer(gymnax_env, gymnax_env_params, states, cum_rewards)
-vis.animate(save_fname=os.path.join(DIR, f'visualization_{training_state.steps}_steps.gif'))
+frames = [ env.render(state, None) for state in states ]
+mediapy.write_video(os.path.join(DIR, f'visualization_{training_state.steps}_steps.mp4'), 
+    frames, fps=20)

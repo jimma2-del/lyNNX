@@ -2,7 +2,7 @@ import json, sys, os
 import numpy as np
 import matplotlib.pyplot as plt
 
-EXPERIMENT_NAME = 'ppo_g1joystickflatterrain_playground'
+EXPERIMENT_NAME = 'td3_mountaincarcontinuous_gymnax'
 if len(sys.argv) > 1: EXPERIMENT_NAME = sys.argv[1]
 
 EVAL_EPS = 256

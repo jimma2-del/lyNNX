@@ -59,8 +59,8 @@ def render_env(
 @render_env.register
 def render_acrobot(
     env: acrobot.Acrobot,
-    params: acrobot.EnvParams,
     state: acrobot.EnvState,
+    params: acrobot.EnvParams,
 ):
     gym_env = _get_gym_env("Acrobot-v1", render_mode="rgb_array").unwrapped
     assert isinstance(gym_env, gym_acrobot.AcrobotEnv)

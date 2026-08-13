@@ -6,6 +6,18 @@ For example, run
 python dqn_cartpole_gymnax/dqn_cartpole_gymnax.py
 ```
 
+Corresponding external environments need to be installed for experiments that use external environments.
+```bash
+pip install lynnx[gymnax]
+pip install lynnx[jumanji]
+pip install lynnx[playground]
+```
+
+Scripts for gymnax and Mujoco Playground also use [`mediapy`](https://pypi.org/project/mediapy/) for saving a visualization video.
+```bash
+pip install mediapy
+```
+
 Experiments generate the following files:
 - `evals.jsonl` &mdash; stores evaluation metrics
 - `metrics.jsonl` &mdash; stores training metrics (eg. losses)
