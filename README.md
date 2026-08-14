@@ -57,13 +57,20 @@ The rest of this section will act as an abridged summary.
 ### Installation
 Prerequisites: Python 3.12 or later.
 
-1. Clone the repository: `git clone https://github.com/jimma2-del/lyNNX.git lynnx && cd lynnx`
-2. Create a virtual environment: `python -m venv venv`
-3. Activate it: `venv/Scripts/activate` (Windows), or `source venv/bin/activate` (macOS and Linux)
-4. Install JAX with CUDA 12: `pip install -U "jax[cuda12]`
-   - Installation details vary for other accelerator devices. See <https://docs.jax.dev/en/latest/installation.html>.
-5. Install this repository as a package: `pip install -e .[gymnax,jumanji,playground]`
-    - Libraries in `[gymnax,jumanji,playground]` can be omitted if you do not need them.
+Install JAX. Installation details vary between accelerator devices; see <https://docs.jax.dev/en/latest/installation.html>. For CUDA 12: 
+```bash
+pip install -U jax[cuda12]
+```
+
+Install lyNNX from PyPI:
+```bash
+pip install lynnx
+```
+
+To use lyNNX with external environment libraries, install them using:
+```bash
+pip install lynnx[gymnax,jumanji,playground,viz]
+```
 
 ### Basic Usage
 Run a sample experiment script (see [examples/experiements](https://github.com/jimma2-del/lyNNX/tree/master/examples/experiments)):
