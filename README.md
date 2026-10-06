@@ -8,6 +8,9 @@
 <a href="https://opensource.org/license/Apache-2.0">
     <img src="https://img.shields.io/badge/License-Apache%202.0-purple.svg" alt="License" />
 </a>
+<a href="https://pypi.org/project/lynnx/">
+    <img src="https://img.shields.io/pypi/v/lynnx?color=%230073b7" alt="PyPi Version" />
+</a>
 <a href="https://colab.research.google.com/github/jimma2-del/lyNNX/blob/master/examples/tutorial/tutorial.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg"/>
 </a>
